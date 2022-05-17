@@ -18,7 +18,8 @@
 git clone https://github.com/MrIvanDii/ASFERO_test_mail_sending
 cd ASFERO
 python -m venv rest_env
-rest_env\Scripts\activate
+rest_env\Scripts\activate (для OS Windows)
+source rest_env/bin/activate (для OS Mac/Linux)
 pip install -r requirements.txt
 ```
 # Запуск тестов
