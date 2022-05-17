@@ -13,13 +13,14 @@
 "Received mail on theme {'head'} with message: {'body'}. It contains {'Count of letters'} letters and {'Count of numbers'} numbers"
 - удалить все полученные письма кроме последнего
 
-
+# Копирование репозитория и установка зависимостей
+```
 git clone https://github.com/MrIvanDii/ASFERO_test_mail_sending
 cd ASFERO
 python -m venv rest_env
 rest_env\Scripts\activate
 pip install -r requirements.txt
-
+```
 # Запуск тестов
 
 Перед запуском тестов необходимо перейти в каталог проекта ASFERO
@@ -32,5 +33,6 @@ pip install -r requirements.txt
 '-v' - verbose режим, чтобы видеть, какие тесты были запущены
 
 # команда запуска
-
-'py.test -s -v tests'
+```
+py.test -s -v tests
+```
