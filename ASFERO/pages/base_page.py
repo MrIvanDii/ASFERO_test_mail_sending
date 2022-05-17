@@ -65,8 +65,13 @@ class BasePage:
         with open('HTML/page.html', "w") as file:
             file.write(self.driver.page_source)
 
+    def get_source_of_page_with_letters(self):
+        time.sleep(3)
+        with open('HTML/page2.html', "w") as file:
+            file.write(self.driver.page_source)
+
     def check_the_status(self):
-        with open("HTML/page.html", "rb") as file:
+        with open("HTML/page2.html", "rb") as file:
             src = file.read().decode(errors='replace')
 
         soup = BeautifulSoup(src, "lxml")
