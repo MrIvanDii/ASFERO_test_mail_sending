@@ -20,7 +20,7 @@ def test_log_in(browser):
         letter_page.click_on_the_button_send()
 
     letter_page.click_on_the_button_letters()
-    letter_page.get_source_of_page()
+    letter_page.get_source_of_page_with_letters()
     letter_page.check_the_status()
     letter_page.collect_data_head()
     letter_page.collect_links_messages()
@@ -31,5 +31,3 @@ def test_log_in(browser):
     letter_page.enter_subject('Final letter of the test')
     letter_page.click_on_the_button_send()
     letter_page.click_on_the_button_letters()
-
-
