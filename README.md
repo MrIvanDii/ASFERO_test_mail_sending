@@ -1,19 +1,24 @@
-# ASFERO_test_mail_sending
-Тестовое задание на должность QA Automation Engineer в ASFERO
+# ASFERO_test_mail_sending:
 
-Написать тестовый проект с использованием Python, Selenium.
+Test task for the position QA Automation Engineer в ASFERO
 
-# Тест должен уметь следующее:
+Write a test project using Python, Selenium.
 
-- залогиниться на почтовый сервис
-- отправить любое колличество писем (в данном случае самому себе) с заполненными полями: head, body
-- проверить статус получения этих писем
-- собрать данные с писем в словарь ({head:body})
-- сгенерировать новое количество писем (соответствующие колличеству отправленных писем) и отправить их в новом теле письма:
-"Received mail on theme {'head'} with message: {'body'}. It contains {'Count of letters'} letters and {'Count of numbers'} numbers"
-- удалить все полученные письма кроме последнего
+# Test must be able to do the next instruction:
 
-# Копирование репозитория и установка зависимостей
+- Login to any email box
+- Send from mails from current box to yourself with:
+    Theme: Random string with 10 symbols (letters and numbers only)
+    Body: Random string with 10 symbols (letters and numbers only)
+- Check that all mails are delivered.
+- Collect data from all incoming mails and save it as Object (Dictionary), where:
+     Key is theme of mail
+     Value is body of mail
+- Send collected data to yourself as: “Received mail on theme {Theme} with message: {Body}. It contains {Count of letters} letters and {Count of numbers} numbers” (repeat for each mail)
+- Delete all received mails except the last one
+
+
+# Copying the repository and installing dependencies:
 ```
 git clone https://github.com/MrIvanDii/ASFERO_test_mail_sending
 cd ASFERO_test_mail_sending/ASFERO
@@ -22,18 +27,17 @@ rest_env\Scripts\activate (для OS Windows)
 source rest_env/bin/activate (для OS Mac/Linux)
 pip install -r requirements.txt
 ```
-# Запуск тестов
+# Running tests:
 
-Перед запуском тестов необходимо перейти в каталог проекта ASFERO
+Before running the tests, you should change pwd to the ASFERO project directory
 
+# Launch arguments:
 
-# Аргументы запуска:
+'-s' - show prints in progress
 
-'-s' - показывать принты в процессе выполнения
+'-v' - verbose mode to see which tests have been run
 
-'-v' - verbose режим, чтобы видеть, какие тесты были запущены
-
-# команда запуска
+# Start command:
 ```
 py.test -s -v tests
 ```
