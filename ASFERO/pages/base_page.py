@@ -92,7 +92,7 @@ class BasePage:
 
 
     def collect_data_head(self):
-        with open("HTML/page.html", "rb") as file:
+        with open("HTML/page2.html", "rb") as file:
             src = file.read().decode(errors='replace')
 
         soup = BeautifulSoup(src, "lxml")
@@ -113,7 +113,8 @@ class BasePage:
         self.conn.commit()
 
     def collect_links_messages(self):
-        with open("HTML/page.html", "rb") as file:
+        
+        with open("HTML/page2.html", "rb") as file:
             src = file.read().decode(errors='replace')
 
         dom = 'https://mbox2.i.ua'
